@@ -1,0 +1,25 @@
+{
+  "name": "text-to-speach-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tomotaka-kato/text-to-speach-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomotaka-kato/text-to-speach-sample/issues"
+  },
+  "homepage": "https://github.com/tomotaka-kato/text-to-speach-sample#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "xmlbuilder": "^13.0.2"
+  }
+}
