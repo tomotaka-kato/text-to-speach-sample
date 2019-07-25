@@ -22,7 +22,7 @@ exzample
 `localhost:8080/?text=テスト`
 
 ## heroku環境
-https://arcane-temple-52272.herokuapp.com/
+https://arcane-temple-52272.herokuapp.com/?text=
 
 例えば
 `https://arcane-temple-52272.herokuapp.com/?text=サンプルテキストです。`
