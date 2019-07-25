@@ -16,10 +16,13 @@ AzureのSpeach Serviceのキー情報は環境変数から取得するため、�
 
 ` node index.js`
 
-getのクエリパラメータでテキストを渡すことで、wavファイルがダウンロードできる。
+getのクエリパラメータでテキストを渡すことで、発話またはwavファイルがダウンロードできる。
 
-exzample
+ブラウザ上での発話
 `localhost:8080/?text=テスト`
+
+wavファイルのダウンロード
+`localhost:8080/download?text=テスト`
 
 ## heroku環境
 https://arcane-temple-52272.herokuapp.com/?text=
@@ -27,4 +30,7 @@ https://arcane-temple-52272.herokuapp.com/?text=
 例えば
 `https://arcane-temple-52272.herokuapp.com/?text=サンプルテキストです。`
 
-と蹴ると、「サンプルテキストです。」と発話するwavがダウンロードされる。
+と蹴ると、「サンプルテキストです。」と発話する。
+
+wavファイルをダウンロードする場合は。
+`https://arcane-temple-52272.herokuapp.com/download?text=サンプルテキストです。`

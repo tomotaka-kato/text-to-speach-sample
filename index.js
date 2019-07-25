@@ -4,10 +4,32 @@ const path = require('path');
 // expressアプリを生成する
 const app = express();
 
-// ルート（http://localhost/）にアクセスしてきたときに「Hello」を返す
+/**
+ * ブラウザ上で発話をさせる
+ */
 app.get('/', async (req, res) => {
     const subscriptionKey = process.env.SPEECH_SERVICE_KEY;
-    console.log(`key: ${subscriptionKey}`)
+    if (!subscriptionKey) {
+        throw new Error('Environment variable for your subscription key is not set.')
+    };
+
+    try {
+        const accessToken = await getAccessToken(subscriptionKey);
+        const text = req.query.text;
+        console.log(text)
+        await textToSpeech(accessToken, text);
+        res.header('Content-Type', 'audio/wav')
+        res.sendFile(path.join(__dirname, 'TTSOutput.wav'))
+    } catch (err) {
+        console.log(`Something went wrong: ${err}`);
+    }
+})
+
+/**
+ * wavファイルとしてダウンロードをする
+ */
+app.get('/download', async (req, res) => {
+    const subscriptionKey = process.env.SPEECH_SERVICE_KEY;
     if (!subscriptionKey) {
         throw new Error('Environment variable for your subscription key is not set.')
     };
