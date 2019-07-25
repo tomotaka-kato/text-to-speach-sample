@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tomotaka-kato/text-to-speach-sample#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "readline-sync": "^1.4.9",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
