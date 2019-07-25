@@ -7,6 +7,7 @@ const app = express();
 // ルート（http://localhost/）にアクセスしてきたときに「Hello」を返す
 app.get('/', async (req, res) => {
     const subscriptionKey = process.env.SPEECH_SERVICE_KEY;
+    console.log(`key: ${subscriptionKey}`)
     if (!subscriptionKey) {
         throw new Error('Environment variable for your subscription key is not set.')
     };
