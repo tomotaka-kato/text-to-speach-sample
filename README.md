@@ -32,5 +32,6 @@ https://arcane-temple-52272.herokuapp.com/?text=
 
 と蹴ると、「サンプルテキストです。」と発話する。
 
-wavファイルをダウンロードする場合は。
+wavファイルをダウンロードする場合は、
 `https://arcane-temple-52272.herokuapp.com/download?text=サンプルテキストです。`
+と蹴るとファイルがダウンロードされる。
